@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62,5%;
+}
+body{
+    font-family: 'Lato';
+    color: #472f13;
+    background: #E6DADA; 
+    background: -webkit-linear-gradient(to top, #274046, #E6DADA); 
+    background: linear-gradient(to top, #274046, #E6DADA); 
+
+
+}
+.title{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    text-transform: uppercase;
+        
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 
+    minmax(6rem, 1fr)
+    [start]
+    repeat(8, minmax(min-content, 14rem))
+    [end]
+    minmax(6rem, 1fr);
+}
+.grille{
+
+    grid-column: start / end;
+    margin: 12rem 0 12rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
+}
+
+.carte{
+    background-color:rgb(125, 236, 231);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3.5rem;
+    border: 2px solid rgb(111, 241, 235);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgb(125, 236, 231);
+}
+.cartImg{
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    border-radius: 10px 10px 0px 0px;
+    
+
+}
+.name{
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    width: 80%;
+    font-family: 'Lato';
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: #101d3c;
+    color: #fff;
+    font-weight: 400;
+    align-self: end;
+    justify-self: center;
+    z-index: 3;
+    transform: translateY(50%);
+
+}
+
+.location, .boat{
+    margin-top: 2.5rem;
+}
+
+.location, .boat, .details, .prix{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+i{
+    fill:#c69963;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.btn{
+    grid-column: 1/-1;
+    background-color: #0980e3;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    border-radius: 0px 0px 10px 10px;
+    
+
+}
+.btn:hover{
+    background: #314455;
+}
+
+.fas{
+    color: #0980e3;
+}
+
+@media only screen and (max-width: 730px){
+    .title{
+        position: absolute;
+            
+            
+        }  
+        h1{
+            text-align: center;
+            font-size: 15px;
+        }
+    }
+@media only screen and (max-width: 600px){
+    .title{
+          position: absolute;           
+        }  
+        h1{
+            text-align: center;
+            font-size: 13px;
+        }
+       
+        .container{
+            display: grid;
+            grid-template-columns: 
+            minmax(.1rem, 1fr)
+            [start]
+            repeat(8, minmax(min-content, 14rem))
+            [end]
+            minmax(0.1rem, 1fr);
+        }
+        
+    
+} 
